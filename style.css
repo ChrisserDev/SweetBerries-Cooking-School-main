@@ -33,6 +33,7 @@ p, a {
 a {
     text-decoration: none;
     color: black;
+    font-weight: 800;
 }
 
 .grid-container {
@@ -53,6 +54,29 @@ a {
     padding: 0 70px;
     align-items: center;
 }
+
+.hamburger-icon {
+    display: none;
+    
+}
+
+.menu {
+    display: none;
+}
+
+#hamburger {
+    display: none;
+}
+
+/* .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+} */
 
 .header img {
     height: 40px;
@@ -77,14 +101,14 @@ a {
 
 .slogan {
     grid-area: slogan;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     padding: 100px 70px;
 }
 
 .slogan img {
-    width: 50%;
-    height: 100%;
+    width: 100%;
+
 }
 
 .welcome-text-container p {
@@ -110,27 +134,23 @@ a {
     background: #FFFFFF;
     box-shadow: 0px 2px 24px rgba(0, 0, 0, 0.05);
     border-radius: 40px;
-    padding: 40px;
+    gap: 30px;
+    padding: 50px 20px;
+    position: relative;
 }
 
-#banners-first-row {
-    /* height: 20%; */
+#icon {
     align-self: flex-end;
     position: absolute;
-    top: 99%;
-}
+    top: -40px;
+    right: 30px;
 
-#banners-second-row {
-    /* height: 20%; */
-    align-self: flex-end;
-    position: absolute;
-    top: 155%;
 }
 
 .card-item button {
     border: 1px solid #E5E5E5;
     width: 40%;
-    height: 15%;
+    padding: 10px 0;
     border-radius: 30px;
     background-color: white;
     font-weight: bold;
@@ -165,20 +185,11 @@ a {
     }
 
     .left-nav-links {
-        width: 25%;
+        width: 23%;
     }
 
     .slogan {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .slogan img {
-        width: 650px;
-        height: 380px;
-        padding: 20px 10px;
+        grid-template-columns: 1fr;
     }
 
     .cards-container {
@@ -189,10 +200,52 @@ a {
 }
 
 
-@media (max-width: 375px) {
-    
+@media (max-width: 426px) {
+
+    .hamburger-icon {
+        display: block;
+        
+    }
+
+    .left-nav-links {
+        /* display: none; */
+        visibility: hidden;
+        width: 10px;
+    }
+
+    #btn1 {
+        display: none;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    #hamburger:checked + .menu{
+        display: flex;
+    }
+
+    .grid-container {
+        align-items: center;
+    }
+
+    h1 {
+      font-size: 36px;
+    }
+
     .cards-container {
-        grid-template-columns: repeat(1, 1fr);
-    
+        grid-template-columns: 1fr;
+    }
+
+    .menu {
+        /* display: flex; */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        align-items: center;
+        padding: 20px 0;
+        gap: 10px;
     }
 }
