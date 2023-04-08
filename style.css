@@ -7,7 +7,7 @@
 body {
     background: #E5E5E5;
 }
-
+/* Great work on being detailed oriented and adding the right fonts to each component of the website. */
 h1, h2 h3 {
     font-family: 'Roboto Serif', serif;
 }
@@ -34,7 +34,7 @@ a {
     color: black;
     font-weight: 800;
 }
-
+/* Superb! You’ve used grid template areas correctly! */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -45,7 +45,7 @@ a {
     "cards-container cards-container cards-container"
     "footer footer footer";
 }
-
+/* Beautiful work on using CSS Grid and flex box together! */
 .header {
     grid-area: header;
     display: flex;
@@ -58,7 +58,7 @@ a {
     height: 40px;
     width: 160px;
 }
-
+/* Nice work on using Flexbox properly to create some of the components. */
 .left-nav-links {
     display: flex;
     justify-content: space-between;
@@ -98,7 +98,7 @@ a {
     grid-template-columns: repeat(2, 1fr);
     padding: 100px 70px;
 }
-
+/* Awesome work on making the image responsive by giving it a % value for it’s width! */
 .slogan img {
     width: 100%;
 
@@ -133,7 +133,7 @@ a {
     padding: 50px 20px;
     position: relative;
 }
-
+/* Great job on positioning the icons on the edge of the card using absolute and relative positioning! */
 #icon {
     align-self: flex-end;
     position: absolute;
@@ -174,7 +174,7 @@ a {
     height: 32px;
     width: 129px;
 }
-
+/* Great work on making your project responsive using media queries properly! */
 @media (max-width: 768px) {
 
     .header {
@@ -202,7 +202,8 @@ a {
     }
 }
 
-
+/* Props to you for implementing a functional hamburger menu!
+Looks great and is functional! */
 @media (max-width: 426px) {
 
     .hamburger-icon {
