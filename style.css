@@ -6,9 +6,6 @@
 
 body {
     background: #E5E5E5;
-}
-
-h1, h2 h3 {
     font-family: 'Roboto Serif', serif;
 }
 
@@ -23,9 +20,8 @@ h3 {
 }
 
 p, a {
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 1.1ren;
+    line-height: 2em;
     color: #646464;
 }
 
@@ -50,19 +46,25 @@ a {
     grid-area: header;
     display: flex;
     justify-content: space-between;
-    padding: 0 73px;
+    padding: 3.5em 4.25em;
     align-items: center;
+    margin: 0 2em;
+    width: 100%;
 }
 
 .header img {
-    height: 40px;
-    width: 160px;
+    height: 60px;
+    width: 250px;
 }
 
 .left-nav-links {
     display: flex;
     justify-content: space-between;
-    width: 12%;
+    width: 15%;
+}
+
+.left-nav-links, #btn1{
+    cursor: pointer;
 }
 
 #btn1 {
@@ -79,15 +81,14 @@ a {
 
 .hamburger-icon {
     display: none;
-    
 }
 
 .menu {
-    display: none;
+    visibility: hidden;
 }
 
-#hamburger {
-    display: none;
+.hamburger {
+    visibility: hidden;
 }
 
 /* SLOGAN AND WELCOME TEXT */
@@ -96,17 +97,18 @@ a {
     grid-area: slogan;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 100px 70px;
+    padding: 6.25em 4.4em;
+    border-bottom: 1px solid gray;
+    margin-bottom: 4.5em;
 }
 
 .slogan img {
     width: 100%;
-
 }
 
 .welcome-text-container p {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.2em;
+    line-height: 1.4em;
     color: #646464;
     padding: 30px 0;
 }
@@ -117,9 +119,9 @@ a {
     grid-area: cards-container;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: 0 65px;
+    padding: 0 4em;
     gap: 80px;
-    margin-bottom: 100px;
+    margin-bottom: 2em;
 }
 
 .card-item {
@@ -128,7 +130,7 @@ a {
     justify-content: space-between;
     background: #FFFFFF;
     box-shadow: 0px 2px 24px rgba(0, 0, 0, 0.05);
-    border-radius: 40px;
+    border-radius: 12px;
     gap: 20px;
     padding: 50px 20px;
     position: relative;
@@ -155,8 +157,9 @@ a {
 .card-one {
     background: #FEBD2F;
     border-radius: 40px;
-    padding: 30px 30px 50px 30px;
-    font-size: 30px;
+    padding: 2em;
+    font-size: 1.8rem;
+    align-self: center;
 }
 
 /* FOOTER SECTION */
@@ -178,7 +181,7 @@ a {
 @media (max-width: 768px) {
 
     .header {
-        padding: 0 50px;
+        padding: 2em 0;
     }
 
     .welcome-text-container {
@@ -186,56 +189,88 @@ a {
     }
 
     .left-nav-links {
-        width: 23%;
+        width: 24%;
     }
 
     .slogan {
         grid-template-columns: 1fr;
-        padding: 80px 50px;
+        padding: 6em 3em;
         gap: 20px;
+    }
+
+    .slogan h1{
+        font-size: 3rem;
+        line-height: 1.2em;
     }
 
     .cards-container {
         grid-template-columns: repeat(2, 1fr);
-        padding: 0 50px;
+        padding: 0;
         gap: 80px 40px;
     }
-}
 
+    .grid-container{
+        margin: 0 1.5em;
+    }
+
+}
 
 @media (max-width: 426px) {
 
     .hamburger-icon {
         display: block;
-        
+        font-size: 1.8em;
+    }
+
+    .header img{
+        width: 180px;
     }
 
     .left-nav-links {
-        /* display: none; */
         visibility: hidden;
         width: 10px;
     }
 
     h1 {
-        font-size: 36px;
-        line-height: 50px;
+        font-size: 1.9rem;
+        line-height: 1.5em;
       }
 
+    .card-one h2{
+        font-size: 1.6rem;
+    }
+
     .slogan {
-        margin-top: 50px;
+        margin-top: 3em;
+        padding: 1.25em 1.4em 2em 1.4em;
+        margin: 2.5em 1em;
     }
 
     #btn1 {
         display: none;
     }
 
-    .menu {
-        display: none;
+    .welcome-text-container p{
+        font-size: .9rem;
     }
 
-    #hamburger:checked + .menu{
-        display: flex;
+    .welcome-text-container h1{
+        font-size: 2em;
     }
+
+    .hamburger:checked + .menu {
+        display: flex;
+        visibility: visible;
+        /* /* flex-direction: column; */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        align-items: center;
+        padding: 1.25em 0;
+        gap: 10px; */
+    }
+
 
     .grid-container {
         align-items: center;
@@ -246,26 +281,43 @@ a {
     }
 
     .card-one {
-        padding: 20px 30px 20px 30px;
+        padding: .8em;
     }
 
     .card-item {
-        padding: 40px 20px;
+        padding: 2em 1em;
+    }
+
+    .card-item h3{
+        font-size: 1.2rem;
+    }
+
+    .card-item p{
+        font-size: .8rem;
+    }
+
+    .card-item button{
+        font-size: .7rem;
     }
 
     .footer {
-        padding: 24px 0;
+        padding: 1.5em 0;
     }
 
-    .menu {
-        /* display: flex; */
+    #icon{
+        width: 50px;
+        top: -25px;
+    }
+
+    /* .menu {
+        display: none;
         flex-direction: column;
         position: absolute;
         top: 60px;
         left: 0;
         width: 100%;
         align-items: center;
-        padding: 20px 0;
+        padding: 1.25em 0;
         gap: 10px;
-    }
+    } */
 }
