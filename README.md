@@ -1,4 +1,4 @@
-# SweetBerries-Cooking-School
+# SweetBerries-Cooking-School https://sweetberriescookingpage.netlify.app/
 
 This static project is a website for an online cooking course platform. 
 It features a clean and intuitive design with distinct sections for navigation, a welcoming slogan, and highlighted cooking courses. 
