@@ -1,3 +1,5 @@
+/* DEFAULT STYLING */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,26 +8,22 @@
 
 body {
     background: #E5E5E5;
-}
-
-h1, h2 h3 {
     font-family: 'Roboto Serif', serif;
 }
 
 h1 {
-    font-size: 64px;
-    line-height: 80px;
+    font-size: 4rem;
+    line-height: 1.2em;
 }
 
 h3 {
-    font-size: 24px;
-    line-height: 25px;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
 }
 
 p, a {
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 1.1rem;
+    line-height: 2em;
     color: #646464;
 }
 
@@ -35,91 +33,73 @@ a {
     font-weight: 800;
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 80px auto auto 80px;
-    grid-template-areas: 
-    "header header header"
-    "slogan slogan slogan"
-    "cards-container cards-container cards-container"
-    "footer footer footer";
-}
+/* NAVIGATION SECTION */
 
-.header {
-    grid-area: header;
+nav {
     display: flex;
     justify-content: space-between;
-    padding: 0 73px;
+    padding: 2.5em;
     align-items: center;
+    width: 100%;
+    margin: 0 2em;
 }
 
-.header img {
-    height: 40px;
-    width: 160px;
-}
-
-.left-nav-links {
+.menu{
     display: flex;
-    justify-content: space-between;
-    width: 12%;
+    gap: 1em;
+    font-size: 1.2rem;
+    margin-right: 4em;
 }
 
-#btn1 {
-    border: none;
-    background-color: black;
-    color: white;
-    font-size: 14px;
-    line-height: 19px;
-    border-radius: 28px;
-    padding: 10px 20px;
+.menu a:hover{
+    border-bottom: 2px solid #FEBD2F;
+    cursor: pointer;
 }
 
-/* MOBILE LAYOUT  */
+nav img {
+    height: 60px;
+    width: 250px;
+}
+
+/* MOBILE LAYOUT FOR NAVIGATION */
 
 .hamburger-icon {
-    display: none;
-    
-}
-
-.menu {
     display: none;
 }
 
 #hamburger {
     display: none;
-}
+} 
 
 /* SLOGAN AND WELCOME TEXT */
 
 .slogan {
-    grid-area: slogan;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 100px 70px;
+    padding: 4.25em 4.4em;
+    border-bottom: 1px solid gray;
+    margin-bottom: 4.5em;
 }
 
 .slogan img {
     width: 100%;
-
 }
 
 .welcome-text-container p {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.2em;
+    line-height: 1.4em;
     color: #646464;
-    padding: 30px 0;
+    padding: 1.9em 0;
 }
 
 /* CARDS SECTION */
 
 .cards-container{
-    grid-area: cards-container;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: 0 65px;
+    padding: 0 4em;
     gap: 80px;
-    margin-bottom: 100px;
+    margin-bottom: 2em;
 }
 
 .card-item {
@@ -128,13 +108,13 @@ a {
     justify-content: space-between;
     background: #FFFFFF;
     box-shadow: 0px 2px 24px rgba(0, 0, 0, 0.05);
-    border-radius: 40px;
+    border-radius: 12px;
     gap: 20px;
-    padding: 50px 20px;
+    padding: 3.125em 1.25em;
     position: relative;
 }
 
-#icon {
+.icon {
     align-self: flex-end;
     position: absolute;
     top: -40px;
@@ -145,29 +125,34 @@ a {
 .card-item button {
     border: 1px solid #E5E5E5;
     width: 40%;
-    padding: 10px 0;
+    padding: 0.6em 0;
     border-radius: 30px;
     background-color: white;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.card-item button:hover{
+    background: #FEBD2F;
 }
 
 .card-one {
-    background: #FEBD2F;
+    align-self: center;
     border-radius: 40px;
-    padding: 30px 30px 50px 30px;
-    font-size: 30px;
+    padding: 2em;
+    font-size: 1.8rem;
+    background: #FEBD2F;
 }
 
 /* FOOTER SECTION */
 
 .footer {
-    background-color: #FEBD2F;
-    grid-area: footer;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px 0;
+    padding: 2.5em 0;
+    background-color: #FEBD2F;
 }
 
 .footer img {
@@ -175,97 +160,127 @@ a {
     width: 129px;
 }
 
+/* LAYOUT FOR TABLET */
+
 @media (max-width: 768px) {
 
     .header {
-        padding: 0 50px;
+        padding: 2em 0;
     }
 
+    .menu{
+        display: flex;
+        gap: 1em;
+        font-size: 1rem;
+        margin-right: 4em;
+    }
+    
+    .slogan {
+        grid-template-columns: 1fr;
+        padding: 1em 3em 3em 3em;
+        gap: 20px;
+    }
+    
+    .slogan h1{
+        font-size: 3rem;
+        line-height: 1.2em;
+    }
+    
     .welcome-text-container {
         text-align: center;
     }
 
-    .left-nav-links {
-        width: 23%;
-    }
-
-    .slogan {
-        grid-template-columns: 1fr;
-        padding: 80px 50px;
-        gap: 20px;
-    }
-
     .cards-container {
         grid-template-columns: repeat(2, 1fr);
-        padding: 0 50px;
-        gap: 80px 40px;
+        padding: 1.5em;
+        gap: 60px 30px;
     }
 }
 
+/* MOBILE LAYOUT */
 
 @media (max-width: 426px) {
 
     .hamburger-icon {
         display: block;
-        
-    }
-
-    .left-nav-links {
-        /* display: none; */
-        visibility: hidden;
-        width: 10px;
-    }
-
-    h1 {
-        font-size: 36px;
-        line-height: 50px;
-      }
-
-    .slogan {
-        margin-top: 50px;
-    }
-
-    #btn1 {
-        display: none;
+        font-size: 1.8em;
     }
 
     .menu {
         display: none;
     }
-
+    
     #hamburger:checked + .menu{
         display: flex;
+        position: absolute;
+        top: 105px;
+        left: 0;
+        flex-direction: column;
+        width: 106%;
+        align-items: center;
+        background-color: #FEBD2F;
+        overflow: hidden;
     }
 
-    .grid-container {
-        align-items: center;
+    .header img {
+        width: 180px;
+    }
+
+    h1 {
+        font-size: 1.9rem;
+        line-height: 1.5em;
+      }
+
+    .card-one h2{
+        font-size: 1.6rem;
+    }
+
+    .slogan {
+        padding: 1.25em 1.4em 2em 1.4em;
+        margin: .2em 1em 2.5em 1em;
+    }
+
+    .welcome-text-container p {
+        font-size: .9rem;
+    }
+
+    .welcome-text-container h1{
+        font-size: 2em;
     }
 
     .cards-container {
         grid-template-columns: 1fr;
+        margin-top: 0;
+        padding-left: 2.6em;
+    }
+    
+    .icon{
+        width: 50px;
+        top: -25px;
     }
 
     .card-one {
-        padding: 20px 30px 20px 30px;
+        padding: .8em;
     }
 
     .card-item {
-        padding: 40px 20px;
+        padding: 2em 1em;
+    }
+
+    .card-item h3{
+        font-size: 1.2rem;
+    }
+
+    .card-item p{
+        font-size: .8rem;
+    }
+
+    .card-item button{
+        font-size: .7rem;
     }
 
     .footer {
-        padding: 24px 0;
-    }
-
-    .menu {
-        /* display: flex; */
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        align-items: center;
-        padding: 20px 0;
-        gap: 10px;
+        padding: 1.5em 0;
+        width: 100vw;
     }
 }
